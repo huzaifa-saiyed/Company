@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_register_success">
+        <observer name="company_custom_save_customer_address" instance="Kitchen\Company\Observer\SaveAddress" />
+    </event>
+    <event name="payment_method_is_active">
+        <observer name="kitchen_company_customer_group_offline_method" instance="Kitchen\Company\Observer\OfflinePayment" />
+    </event>
+</config>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+        <type name="Magento\Framework\Console\CommandList">
+            <arguments>
+                <argument name="commands" xsi:type="array">
+                    <item name="cleans" xsi:type="object">Kitchen\Company\Model\Ping</item>
+                </argument>
+            </arguments>
+        </type>
+
+        <type name="Magento\Catalog\Model\Product">
+            <plugin name="change_product_price" type="Kitchen\Company\Plugin\DiscountPrice" sortOrder="1" />
+        </type>
+
+
+        <preference for="Kitchen\Company\Api\CustomInterface" type="Kitchen\Company\Model\Custom"/>
+
+    
+</config>

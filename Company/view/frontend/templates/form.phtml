@@ -1,0 +1,27 @@
+<h3>Staff Add Form</h3>
+<h3>
+    <?php echo $block->getIds() ?>
+</h3>
+
+
+<form action="<?= $this->getURL('company/index/saveform'); ?>" method="post">
+
+    <label for="entity_id">Entity ID</label>
+    <input type="text" name="entity_id"><br><br>
+    <label for="parent_id">Parent ID</label>
+    <input type="text" name="parent_id" value="<?php echo $block->getIds(); ?>"><br><br>
+    
+    <label for="firstName">First Name:</label>
+    <input type="text" name="firstName" id=""><br><br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" name="lastName" id=""><br><br>
+    <label for="emails">Email:</label>
+    <input type="text" name="emails" id=""><br><br>
+    <label for="pwds">Password:</label>
+    <input type="text" name="pwds" id="">
+    <br><br>
+    <button type="submit" name="btnSubmit">SAVE</button> 
+</form><br>
+<form action="<?= $this->getURL('company/index/index'); ?>" method="post">
+    <button type="submit" name="btnView"> < BACK</button>  
+</form>
